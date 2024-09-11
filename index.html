@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Length Example</title>
+</head>
+<body>
+    <input id="input" type="text" onkeydown="updateDemo()">
+    <p id="demo"></p>
+    <p id="main"></p>
+    <button id="bt" onclick="calculateLength()">Click to know length of your input</button>
+
+    <script>
+        function updateDemo() {
+            document.getElementById("demo").innerHTML = "Input received";
+        }
+
+        function calculateLength() {
+            let inputElement = document.getElementById("input");
+            let text = inputElement.value;
+            document.getElementById("main").innerHTML = "Length: " + text.length;
+        }
+    </script>
+</body>
+</html>
